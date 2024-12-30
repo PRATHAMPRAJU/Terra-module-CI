@@ -1,13 +1,8 @@
-terraform {
-required_version = ">= 1.0.0"  # Specify the required version
-}
-
-resource "aws_vpc" "example_vpc" {
-cidr_block       = var.cidr_block
-instance_tenancy = var.instance_tenancy
+resource "aws_instance" "example" {
+ami           = var.ami_id
+instance_type = var.instance_type
 
 tags = {
-Name = var.vpc_name
+Name = var.instance_name
 }
 }
-
