@@ -1,17 +1,17 @@
-variable "cidr_block" {
-  description = "The CIDR block for the VPC."
+variable "ami_id" {
+  description = "The AMI ID for the EC2 instance"
   type        = string
-  default     = "10.0.0.0/16"
+  default     = "ami-053b12d3152c0cc71"  # Specified AMI ID
 }
 
-variable "instance_tenancy" {
-  description = "A tenancy option for instances launched into the VPC."
+variable "instance_type" {
+  description = "The instance type"
   type        = string
-  default     = "default"
+  default     = "t2.micro"  # Specified instance type
 }
 
-variable "vpc_name" {
-  description = "The name of the VPC."
+variable "instance_name" {
+  description = "The name of the EC2 instance"
   type        = string
-  default     = "example-vpc"
+  default     = "terraform-cd"  # Specified instance name
 }
